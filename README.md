@@ -15,8 +15,6 @@ $$W^{(l)} \approx \hat{W}^{(l)} = U^{(l)} S^{(l)} V^{(l)T}$$
 where $$U^{(l)}$$,  $$S^{(l)}$$, and $$V^{(l)}$$ are derived from the SVD of $$W^{(l)}$$.
    
 3. Using only the top $$D$$ singular values from $$S^{(l)}$$ to construct the low-rank approximation:
-
-$$W^{(l)} \approx (U^{(l)})_{:,1:D} (S^{(l)})_{1:D,1:D} (V^{(l)T})_{:,1:D}$$
    
 4. Evaluating the test accuracy for different values of $$D$$ (e.g., 10, 20, 50, 100, etc.).
 
@@ -53,9 +51,7 @@ Incorporate SVD into the training process by dynamically applying it at every it
 
 $$W^{(l)} = U_{:,1:20}^{(l)} S_{1:20,1:20}^{(l)} V_{:,1:20}^{T(l)}$$
 
-   - Using only the top $$D = 20$$ components for feedforward computation:
-
-$$x^{(l+1)} = g\left(U_{:,1:20}^{(l)} S_{1:20,1:20}^{(l)} V_{:,1:20}^{T(l)} x^{(l)} + b^{(l)}\right)$$
+   - Using only the top $$D = 20$$ components for feedforward computation
 
 3. Updating parameters $$W^{(l)}$$ during backpropagation while ensuring:
    - Gradients are computed with respect to the full weight matrix.
