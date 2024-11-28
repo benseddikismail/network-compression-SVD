@@ -16,7 +16,7 @@ where $$U^{(l)}$$,  $$S^{(l)}$$, and $$V^{(l)}$$ are derived from the SVD of $$W
    
 3. Using only the top $$D$$ singular values from $$S^{(l)}$$ to construct the low-rank approximation:
 
-$$W^{(l)}$$ $$\approx$$ $$U^{(l)}_{:,1:D} S^{(l)}_{1:D,1:D} V^{(l)T}_{:,1:D}$$
+$$W^{(l)} \approx (U^{(l)})_{:,1:D} (S^{(l)})_{1:D,1:D} (V^{(l)T})_{:,1:D}$$
    
 4. Evaluating the test accuracy for different values of $$D$$ (e.g., 10, 20, 50, 100, etc.).
 
