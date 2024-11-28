@@ -49,7 +49,7 @@ Incorporate SVD into the training process by dynamically applying it at every it
 2. During each feedforward pass:
    - Performing SVD on $$W^{(l)}$$:
    
-   $$W^{(l)} = U_{:,1:20}^{(l)} S_{1:20,1:20}^{(l)} V_{:,1:20}^{T(l)}$$
+$$W^{(l)} = U_{:,1:20}^{(l)} S_{1:20,1:20}^{(l)} V_{:,1:20}^{T(l)}$$
 
    - Using only the top $$D = 20$$ components for feedforward computation
 
